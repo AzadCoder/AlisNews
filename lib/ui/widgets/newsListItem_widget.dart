@@ -1,3 +1,4 @@
+import 'package:AlisNews/models/news_model.dart';
 import 'package:flutter/material.dart';
 //widgets
 import './shimmerImage_widget.dart';
@@ -5,6 +6,8 @@ import './shimmerImage_widget.dart';
 import '../pages/newsDetails/newsDetails_page.dart';
 
 class NewsListItem extends StatelessWidget {
+  NewsListItem(NewsModel this.news);
+  NewsModel news;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -27,7 +30,8 @@ class NewsListItem extends StatelessWidget {
         child: Row(
           children: [
             ShimmerImage(
-              url: "https://picsum.photos/200/200",
+              url:
+                  "${news.urlToImage ?? 'https://jbdiamonds.com/media/catalog/new-pp/placeholder/default/no-img-1000.jpg'}",
               size: Size(110, 80),
               borderRadius: 5,
             ),
@@ -37,14 +41,14 @@ class NewsListItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Spenco footwear now sold under Waco shoes",
+                    "${news.title}",
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     style: Theme.of(context).textTheme.headline2,
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "2 min read",
+                    "${news.source.name}",
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
                 ],

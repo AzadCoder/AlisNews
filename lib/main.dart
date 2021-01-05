@@ -1,7 +1,7 @@
 //Core Flutter and Dart
 import 'package:flutter/material.dart';
 //pages
-import './pages/bottomNavBar/bottomNavBar_page.dart';
+import './ui/pages/bottomNavBar/bottomNavBar_page.dart';
 
 void main() {
   runApp(MyApp());

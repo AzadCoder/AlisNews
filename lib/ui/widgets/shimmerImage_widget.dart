@@ -33,6 +33,14 @@ class ShimmerImage extends StatelessWidget {
             placeholder: "",
             image: url,
             fit: BoxFit.cover,
+            imageErrorBuilder: (context, o, s) {
+              return Image.network(
+                "https://jbdiamonds.com/media/catalog/new-pp/placeholder/default/no-img-1000.jpg",
+                fit: BoxFit.cover,
+                width: size.width,
+                height: size.height,
+              );
+            },
           )
         ],
       ),
