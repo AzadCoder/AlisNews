@@ -11,4 +11,5 @@ A new Flutter project.
 6: Http
 
 
-![Image 1](https://github.com/MstrZeroOne/AlisNews/blob/main/images/1.png?raw=true)
+![](https://github.com/MstrZeroOne/AlisNews/blob/main/images/1.png?raw=true)
+![](https://github.com/MstrZeroOne/AlisNews/blob/main/images/2.png?raw=true)
