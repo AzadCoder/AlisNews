@@ -1,8 +1,11 @@
+import 'package:AlisNews/models/news_model.dart';
 import 'package:flutter/material.dart';
 //widgets
 import '../../widgets/shimmerImage_widget.dart';
 
 class NewsDetails extends StatefulWidget {
+  NewsDetails(this.news);
+  final NewsModel news;
   @override
   _NewsDetailsState createState() => _NewsDetailsState();
 }
@@ -52,21 +55,21 @@ class _NewsDetailsState extends State<NewsDetails> {
                 children: [
                   ShimmerImage(
                     size: Size(double.infinity, 200),
-                    url: "https://picsum.photos/200/200",
+                    url: "${widget.news.urlToImage}",
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Latest Bitcoin Price And Market Analysis",
+                    "${widget.news.title}",
                     style: Theme.of(context).textTheme.headline1,
                   ),
                   SizedBox(height: 15),
                   Text(
-                    "By Yhoo Finance | 5 min red",
+                    "${widget.news.source.name}",
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
                   SizedBox(height: 20),
                   Text(
-                    "Bitcoin was looking promising to take on the n\$300 level yesterday fter finally breaking above a critical down-trending resistance. Unfortunately, the breakout was nothing more than on orchestrated trading strategy used commonly by Bitcoin whles to shake out retail traders an dlikely accumulate more BTC.\n\nWhenever there's low liquidity, Whale traders need to create value in order to place large sell orders and reduce slippage as much as possible. A common case is the USA is fucking his USD. Bitcoin was looking promising to take on the n\$300 level yesterday fter finally breaking above a critical down-trending resistance. Unfortunately, the breakout was nothing more than on orchestrated trading strategy used commonly by Bitcoin whles to shake out retail traders an dlikely accumulate more BTC.\n\nWhenever there's low liquidity, Whale traders need to create value in order to place large sell orders and reduce slippage as much as possible. A common case is the USA is fucking his USD. Bitcoin was looking promising to take on the n\$300 level yesterday fter finally breaking above a critical down-trending resistance. Unfortunately, the breakout was nothing more than on orchestrated trading strategy used commonly by Bitcoin whles to shake out retail traders an dlikely accumulate more BTC.\n\nWhenever there's low liquidity, Whale traders need to create value in order to place large sell orders and reduce slippage as much as possible. A common case is the USA is fucking his USD. Bitcoin was looking promising to take on the n\$300 level yesterday fter finally breaking above a critical down-trending resistance. Unfortunately, the breakout was nothing more than on orchestrated trading strategy used commonly by Bitcoin whles to shake out retail traders an dlikely accumulate more BTC.\n\nWhenever there's low liquidity, Whale traders need to create value in order to place large sell orders and reduce slippage as much as possible. A common case is the USA is fucking his USD. Bitcoin was looking promising to take on the n\$300 level yesterday fter finally breaking above a critical down-trending resistance. Unfortunately, the breakout was nothing more than on orchestrated trading strategy used commonly by Bitcoin whles to shake out retail traders an dlikely accumulate more BTC.\n\nWhenever there's low liquidity, Whale traders need to create value in order to place large sell orders and reduce slippage as much as possible. A common case is the USA is fucking his USD. Bitcoin was looking promising to take on the n\$300 level yesterday fter finally breaking above a critical down-trending resistance. Unfortunately, the breakout was nothing more than on orchestrated trading strategy used commonly by Bitcoin whles to shake out retail traders an dlikely accumulate more BTC.\n\nWhenever there's low liquidity, Whale traders need to create value in order to place large sell orders and reduce slippage as much as possible. A common case is the USA is fucking his USD.",
+                    "${widget.news.content}",
                     maxLines: _readMoreMode == true ? 20 : null,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),

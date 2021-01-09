@@ -6,8 +6,8 @@ import './shimmerImage_widget.dart';
 import '../pages/newsDetails/newsDetails_page.dart';
 
 class NewsListItem extends StatelessWidget {
-  NewsListItem(NewsModel this.news);
-  NewsModel news;
+  NewsListItem(this.news);
+  final NewsModel news;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -15,7 +15,7 @@ class NewsListItem extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return NewsDetails();
+              return NewsDetails(news);
             },
           ),
         );

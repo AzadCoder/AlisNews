@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import '../../../widgets/shimmerImage_widget.dart';
 
 class CardItem extends StatelessWidget {
-  CardItem(NewsModel this.news);
+  CardItem(this.news);
   final NewsModel news;
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class CardItem extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return NewsDetails();
+              return NewsDetails(news);
             },
           ),
         );

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../pages/bookmark/bookmark_page.dart';
 import '../../pages/home/home_page.dart';
 import '../../pages/search/search_page.dart';
-import '../../pages/settings/widgets/settings_page.dart';
 
 class ButtonNavBarPage extends StatefulWidget {
   @override
@@ -26,16 +25,16 @@ class _ButtonNavBarPageState extends State<ButtonNavBarPage> {
       "icon": Icons.search,
       "page": SearchPage(),
     },
-    {
-      "title": "Bookmark",
-      "icon": Icons.bookmark_border,
-      "page": BookmarkPage(),
-    },
-    {
-      "title": "Settings",
-      "icon": Icons.settings,
-      "page": SettingsPage(),
-    },
+    // {
+    //   "title": "Bookmark",
+    //   "icon": Icons.bookmark_border,
+    //   "page": BookmarkPage(),
+    // },
+    // {
+    //   "title": "Settings",
+    //   "icon": Icons.settings,
+    //   "page": SettingsPage(),
+    // },
   ];
 
   @override
