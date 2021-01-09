@@ -1,6 +1,6 @@
 # AlisNews
 
-A new Flutter project.
+A news app that create with flutter and newsapi.org.
 
 ## Used plugins
 1: Bloc pattern
