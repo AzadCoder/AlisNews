@@ -1,7 +1,7 @@
 //Core Dart and Flutter
 import 'package:flutter/material.dart';
 //Pages
-import '../../pages/bookmark/bookmark_page.dart';
+// import '../../pages/bookmark/bookmark_page.dart';
 import '../../pages/home/home_page.dart';
 import '../../pages/search/search_page.dart';
 
